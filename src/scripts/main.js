@@ -12,6 +12,10 @@ const clickHandler = (e) => {
 
   const closestUl = e.target.nextElementSibling;
 
+  if (!closestUl) {
+    return;
+  }
+
   if (closestUl.style.display !== 'none') {
     closestUl.style.display = 'none';
   } else {
